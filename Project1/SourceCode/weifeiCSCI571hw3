@@ -1,0 +1,101 @@
+<!--******************************
+  - Name: Wei Fei
+  - USC-id: 5795664300
+  - Project: CSCI571 Homework 3
+  - File: weifeiCSCI571hw3.html
+  - Create Date: 01/11/18
+  - Last Modified: 01/22/18
+******************************-->
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <TITLE>HW3</TITLE>
+</HEAD>
+
+<BODY>
+  <div>
+    <h6 style="padding-left:166px"><p>332 Keawe Street<br/>Hilo, Hawaii 96720</p></h6>
+    <h1>T H Y M E</h1>
+  </div>
+
+  <div>
+    <ul>
+      <li><a target="_blank" href="page2.html#home"><font color="#bd9b5c">Home</font></a></li>
+      <li><a target="_blank" href="page2.html#our-vision">Our Vision</a></li>
+      <li><a target="_blank" href="page2.html#menu">Menu</a></li>
+      <li><a target="_blank" href="page2.html#order-online">Order Online</a></li>
+      <li><a target="_blank" href="page2.html#contact-us">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="parallax1">
+  </div>
+
+  <div class="top_part">
+    <div class="left_bar">
+      <div class="image3">
+        <img src="http://cs-server.usc.edu:45678/hw/hw3/images/image3.jpg">
+      </div>
+      <div class="image2">
+        <img src="http://cs-server.usc.edu:45678/hw/hw3/images/image2.jpg">
+      </div>
+      <div class="paragraph2">
+        <h2>Freshest Island<br>food from local vendors</h2>
+        <h4>Supporting local economy and the<br>environment. Gluten-free items also
+        <br>available.</h4>
+        <h5><a class="read_link" target="_blank" href="page2.html#our-vision">Read More Here ></a></h5>
+      </div>
+    </div>
+
+    <div class="right_bar">
+      <div class="paragraph1">
+        <h3>OUR RESTAURANT</h3>
+        <h2>Local fresh cuisine<br>for everyone</h2>
+        <h4>Pineapples is a family-owned and operated<br>restaurant, dedicated to
+          providing island fresh<br>cuisine to the east side of the Big Island. Our
+          <br>restaurant is located in the historic Pineapple<br>Building, located in
+          the heart of downtown Hilo.</h4>
+        <h5><a class="read_link" target="_blank" href="page2.html#our-vision">Read More Here ></a></h5>
+      </div>
+      <div class="image1">
+        <img src="http://cs-server.usc.edu:45678/hw/hw3/images/image1.jpg">
+      </div>
+      <div class="image4">
+        <img src="http://cs-server.usc.edu:45678/hw/hw3/images/image4.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div class="middle_part">
+    <div class="image7">
+      <img src="http://cs-server.usc.edu:45678/hw/hw3/images/image7.jpg">
+      <div class="order_box">
+        <center>
+        <h3>GREENS JUST GOT FASTER!</h3>
+        <h8><a class="order_link" target="_blank" href="page2.html#order-online">Order Online </a></h8>
+        </center>
+      </div>
+    </div>
+    <div class="paragraph3">
+      <center>
+      <h3>GoGreenMag.com</h3>
+      <h2>&#8220Loved it. We walked in around 6:30 without reservations<br>and were seated.
+        <br>The coconut crusted ono was on special and perfect.&#8221</h2>
+      </center>
+    </div>
+  </div>
+
+  <div class="bottom_part">
+    <div class="parallax2">
+    </div>
+    <div class="background_color">
+      <div class="copy_right">
+        <h7>&copy2017 by Pineapples Hilo Restaurant<br>pineappleshilo.com</h7>
+      </div>
+    </div>
+  </div>
+
+</BODY>
+</HTML>
