@@ -1,0 +1,144 @@
+<!--******************************
+  - Name: Wei Fei
+  - USC-id: 5795664300
+  - Project: CSCI571 Homework4
+  - File: weifeiCSCI571hw4.html
+  - Create Date: 01/30/18
+  - Last Modified: 02/06/18
+******************************-->
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<script>
+	var jsonObj;
+	var html_text;
+	function viewJSON(what)
+	{
+	  var myURL = what.URL.value; //get url of json file
+	  if (myURL == "")
+	  {
+	    alert("Error: URL is empty, please enter the name of JSON file!");
+	    return;
+	  }
+	  jsonObj = loadJSON(myURL); //load json file
+	  jsonObj.onload = generateHTML(jsonObj); //generate HTML codes from data of JSON file
+	  hWin = window.open("", "Assignment4", "height=800, width=950"); //open a pop-up window
+	  hWin.document.write(html_text); //write html codes into pop-up window page
+	  hWin.document.close(); //close the document
+	}
+
+	/*Load a JSON file by the given URL*/
+	function loadJSON(url)
+	{
+		var xmlhttp = new XMLHttpRequest();
+	  try
+	  {
+	    xmlhttp.open("GET", url, false);
+	    xmlhttp.send();
+			jsonObj = JSON.parse(xmlhttp.responseText);
+	  }
+		//handle the error condition which the input file does not exist
+	  catch(error)
+	  {
+	    alert("Error: File does not exist! Please enter a correct file name.");
+			return;
+	  }
+	  return jsonObj;
+	}
+
+	/*Generate HTML codes by the given data from JSON file*/
+	function generateHTML(jsonObj)
+	{
+	  var root = jsonObj.DocumentElement;
+	  html_text = "<html><head><title>JSON Parse Result</title></head><body>";
+	  html_text += "<table border='2' style = 'width:930'>";
+
+	  var header_list = jsonObj.Mainline.Table.Header.Data;
+	  html_text += "<tr>";
+	  for (var i = 0; i < header_list.length; i++)
+	  {
+	    html_text += "<th>" + header_list[i] + "</th>";
+	  }
+	  html_text += "</tr>";
+
+	  var row_list = jsonObj.Mainline.Table.Row
+		//handle the error condition with zero truking companies
+		if (row_list == undefined)
+		{
+			alert("Error: No trucking companies!");
+		}
+	  for (var i = 0; i < row_list.length; i++)
+	  {
+	    html_text += "<tr>";
+	    //var row_key_list = Object.keys(row_list[i]);
+	    for (var element_key in row_list[i])
+	    {
+				html_text += "<td>";
+				if (row_list[i][element_key] == null || row_list[i][element_key] == "")
+				{
+					html_text += "";
+				}
+				else
+				{
+		      //handle hubs list
+		      if (element_key == "Hubs")
+		      {
+						var hub_key = "Hub"
+		        var hub_list = row_list[i][element_key][hub_key];
+		        if(hub_list.length === 0 || hub_list[0] == null)
+		        {
+		          html_text += "";
+		        }
+		        else
+		        {
+		          html_text += "<ul><li><b>" + hub_list[0] + "</b></li>";
+		          for(var hub_index = 0; hub_index < hub_list.length - 1; hub_index++)
+		          {
+		            html_text += "<li>" + hub_list[hub_index + 1] + "</li></ul>";
+		          }
+		        }
+		      }
+		      //handle website address
+		      else if (element_key == "HomePage")
+		      {
+		        html_text += "<a href =" + row_list[i][element_key] + ">" + row_list[i][element_key] + "</a>";
+		      }
+		      //handle image sources
+		      else if (element_key == "Logo")
+		      {
+		        html_text += "<img src='" + row_list[i][element_key];
+		        html_text += "'style=width:240px;height:120px; align=center'>";
+		      }
+		      //handle other general cases
+		      else
+		      {
+		        html_text += row_list[i][element_key];
+		      }
+				}
+	      html_text += "</td>";
+	    }
+	    html_text += "</tr>";
+	  }
+
+	  html_text += "</table>";
+	  html_text += "</body></html>";
+	}
+	</script>
+	<meta charset="UTF-8">
+</HEAD>
+
+<BODY>
+<div style="padding-top:100px">
+<center>
+	<h1>Enter URL for Trucking List JSON File</h1>
+	<form name="myform" method="POST" id="location">
+		<input type="text" name="URL" maxlength="150" size="30" value="truckinglist.json" />
+		<br/><br/>
+		<input type="button" name="submit" value="Submit Query" onClick="viewJSON(this.form)" />
+	</form>
+</center>
+</div>
+</BODY>
+
+</HTML>
