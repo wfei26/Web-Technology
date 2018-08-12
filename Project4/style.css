@@ -1,0 +1,417 @@
+input[type="text"]:disabled
+{
+  background-color:#eaeaf2;
+}
+
+.input-box
+{
+  padding: 10px;
+}
+
+#mainContainer
+{
+  max-width: 1100px !important;
+  padding-top: 10px !important;
+  border-style: solid !important;
+  border-color: #c1c1c1 !important;
+  border-width: thin !important;
+  border-radius: 8px !important;
+  background-color: #f2f2f2 !important;
+}
+
+.title
+{
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.labels
+{
+  font-weight: 500;
+}
+
+.btn-primary, .btn-primary:visited
+{
+  background-color: #1a6bed !important;
+}
+
+.btn-primary:hover:enabled, .btn-primary:active:enabled
+{
+  background-color: #3050f2 !important;
+}
+
+.btn-info, .btn-info:visited
+{
+  color: black !important;
+  background-color: white !important;
+  border-color: #c1c1c1;
+}
+
+.btn-info:hover, .btn-info:active
+{
+  color: black !important;
+  background-color: #c6c6c6 !important;
+  border-color: #c1c1c1;
+}
+
+.btn-outline-primary, .btn-outline-primary:hover {
+    background-color: white;
+    color: #1a6bed;
+}
+
+.btn-outline-primary.changeToActive
+{
+  background-color: #1a6bed;
+  color: white;
+  border: 0;
+}
+
+.btn-extra:active, .btn-extra:focus
+{
+  color: white !important;
+  background-color: #1a6bed !important;
+}
+
+.star
+{
+  color: #d61111;
+}
+
+#input_location
+{
+  margin-left: 16px;
+}
+
+#locationError
+{
+  margin-left: 16px;
+}
+
+.test
+{
+  background-color: red;
+}
+
+.error
+{
+  color: red;
+}
+
+#input_keyword.ng-invalid.ng-touched, #input_location.ng-invalid.ng-touched
+{
+  border: 1px solid red;
+}
+
+.detailsPage
+{
+  max-width: 1400px !important;
+}
+
+.resultsTable
+{
+  max-width: 1400px;
+}
+
+.table
+{
+  border-top: 1px #dbdde0 solid !important;
+}
+
+.btn-page
+{
+  background-color: white !important;
+  border-style: solid !important;
+  border-color: #c1c1c1 !important;
+  border-radius: 5px;
+}
+
+.divider
+{
+  width:8px;
+  height:auto;
+  display:inline-block;
+}
+
+a
+{
+  color: #1a6bed;
+}
+
+.star-ratings-css
+{
+  unicode-bidi: bidi-override;
+  color: white;
+  font-size: 15px;
+  height: 16px;
+  width: 150px;
+  margin: -20 auto;
+  position: relative;
+  padding: 0;
+  display: inline-block;
+}
+
+.star-ratings-css-top
+{
+  color: #e7711b;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.boldText
+{
+  font-weight: bold;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th
+{
+  background-color: #f2f2f2;
+}
+
+.img_row
+{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.img_column
+{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.img_column img
+{
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px)
+{
+  .img_column
+  {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px)
+{
+  .img_column
+  {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.noRecords
+{
+  max-width: 1400px;
+  background-color: #fff2c1;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:8px;
+}
+
+.zeroPadding
+{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.reviewTimeBox
+{
+  padding-left: 2px;
+}
+
+.reviewBorder
+{
+  border-color: #dbdbdb;
+}
+
+#reviewButton
+{
+  color: white;
+  background-color: #7f8187 !important;
+  border-color: #7f8187 !important;
+}
+
+#photosTab, #infoTab, #mapTab, #reviewsTab
+{
+  clear: both;
+}
+
+#googleMap
+{
+  height: 400px;
+}
+
+#routeDetails
+{
+  height: 400px;
+}
+
+#streetView
+{
+  height: 400px;
+}
+
+#googleViewButton:hover
+{
+  background-color: none !important;
+}
+
+.glyphicon-star
+{
+  color: #e8bc2c !important;
+}
+
+.reviewStar
+{
+  color: #e7711b !important;
+}
+
+.failedSearch
+{
+  max-width: 1400px;
+  background-color: #f2b8bc;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:8px;
+}
+
+.highlightRow
+{
+  background-color: #f9db95;
+}
+
+.row
+{
+  max-width: 1400px !important;
+}
+
+table.hoverTable tr:hover td
+{
+  background-color: #dbdbdb;
+}
+
+.fade-in-out
+{
+  transition: 0.8s linear all;
+  opacity: 1;
+}
+
+.fade-in-out.ng-hide
+{
+  opacity: 0;
+}
+
+.right-to-left li
+{
+  float: right;
+}
+
+.slide
+{
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.slide.ng-enter
+{
+  animation-name: slideToLeft;
+  -webkit-animation-name: slideToLeft;
+}
+
+.slide.moveToRight.ng-enter
+{
+  animation-name: slideToRight;
+  -webkit-animation-name: slideToRight;
+}
+
+.slide.ng-leave
+{
+  animation-name: slideToRight;
+  animation-direction: reverse;
+  -webkit-animation-name: slideToRight;
+  -webkit-animation-direction: reverse;
+}
+
+.slide.moveToRight.ng-leave
+{
+  animation-name: slideToLeft;
+  animation-direction: reverse;
+  -webkit-animation-name: slideToLeft;
+  -webkit-animation-direction: reverse;
+}
+
+@keyframes slideToLeft
+{
+  0%
+  {
+    transform: translateX(100%);
+  }
+
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideToRight
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+
+
+@-webkit-keyframes slideToLeft
+{
+  0%
+  {
+    -webkit-transform: translateX(100%);
+  }
+
+  100%
+  {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideToRight
+{
+  0%
+  {
+    -webkit-transform: translateX(-100%);
+  }
+
+  100%
+  {
+    -webkit-transform: translateX(0);
+  }
+}
