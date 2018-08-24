@@ -1,0 +1,60 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <center>
+      <div class="detailsPage" ng-controller="favoritesController">
+        <div ng-if="ifHasFavoriteItems">
+          <div align="right" style="margin-bottom:10px;">
+            <button type="button" class="btn btn-default btn-sm" ng-disabled="ifClickedDetails" ng-click="addAnimation();redirectFavoriteDetailsPage()">
+               Details <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+          </div>
+          <div class="table-responsive" ng-if="ifHasFavoriteItems">
+            <table class="table hoverTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Category</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Favorite</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="x in favoriteRowData track by $index" ng-class="{highlightRow: x.ifHighlight}">
+                  <td><b>{{$index + 1}}</b></td>
+                  <td><img src='{{x.icon}}' height='40px' width='40px'/></td>
+                  <td>{{x.name}}</td>
+                  <td>{{x.vicinity}}</td>
+                  <td>
+                    <button type="button" class="btn btn-default btn-sm" ng-click="removeLocalStorage($index)">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-default btn-sm" ng-click="sendKey($index); redirect('/favoriteDetails_page')">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <button type="button" id="previousButton" class="btn btn-page" name="previous" ng-show="showPrevious" ng-click="getPreviousPage()">Previous</button>
+            <div class="divider"></div>
+            <button type="button" id="nextButton" class="btn btn-page" name="next" ng-show="showNext" ng-click="getNextPage()">Next</button>
+          </div>
+        </div>
+
+        <div ng-if="!ifHasFavoriteItems">
+          <br /><br /><br />
+          <p class="noRecords"><font color="#9b8231">  No records.</font></p>
+        </div>
+      </div>
+    </center>
+    <br></br>
+  </body>
+</html>
