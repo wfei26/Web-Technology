@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.weifei.placessearch.MainActivity">
+
+    <item android:id="@+id/share"
+        android:icon="@drawable/share"
+        android:title="@string/twitter"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/like"
+        android:icon="@drawable/heart_outline_white"
+        android:title="@string/favorite"
+        app:showAsAction="always"/>
+
+</menu>

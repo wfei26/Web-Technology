@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Places Search</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="twitter">Twitter</string>
+    <string name="favorite">Favorite</string>
+    <string name="ApiKey">AIzaSyC9HBExGTftsTmeBjHXLucUi5NH2QXCQkY</string>
+
+    <array name="placeTypes">
+        <item>PlaceType</item>
+        <item>Address</item>
+        <item>Cities</item>
+        <item>Establishment</item>
+        <item>Geocode</item>
+        <item>Regions</item>
+        <item>All</item>
+    </array>
+    <array name="placeTypesValue">
+        <item>0</item>
+        <item>2</item>
+        <item>5</item>
+        <item>34</item>
+        <item>1007</item>
+        <item>4</item>
+        <item>0</item>
+    </array>
+</resources>
