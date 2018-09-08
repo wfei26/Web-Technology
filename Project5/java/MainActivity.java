@@ -1,3 +1,4 @@
+/*Wei Fei*/
 package com.example.weifei.placessearch;
 
 import android.Manifest;
